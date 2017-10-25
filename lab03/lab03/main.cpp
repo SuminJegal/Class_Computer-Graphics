@@ -58,6 +58,7 @@ int main(int argc, const char * argv[]) {
     myTranslateY(5);
     myTranslateZ(5);
     myRotateZ(3);
+    myScaleY(2);
     
     struct Vertex v = {1,2,3,1};
     myRunMatrix(v);
@@ -75,10 +76,12 @@ void mySetMatrixMode(int i){
 void myLoadIdentity(){
     struct Matrix ident_matrix = {1,0,0,0,  0,1,0,0,  0,0,1,0,  0,0,0,1};
     stack.push_back(ident_matrix);
+    printf("Load Identity Matrix\n");
     printS();
 }
 void myPushMatrix(){
     stack.push_back(stack.back());
+    printf("Push Matrix top\n");
     printS();
 }
 void myPopMatrix(){
