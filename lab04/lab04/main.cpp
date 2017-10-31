@@ -37,23 +37,47 @@ void display(){
     glutSolidSphere(0.5, 100, 100);
     glPopMatrix();
     
+   
+    //1번째 행성
     glPushMatrix();
-    GLfloat ambient[] = {0.2, 0.2, 0.2, 1.0};
-    GLfloat diffuse[] = {1.0, 0.8, 0.0, 1.0};
-    GLfloat specular[] = {1.0, 1.0, 1.0, 1.0};
-    GLfloat shine = 100.0; //128이 최대
+    GLfloat ambient1[] = {0.2, 0.2, 0.2, 1.0};
+    GLfloat diffuse1[] = {1.0, 0.8, 0.0, 1.0};
+    GLfloat specular1[] = {0.5, 0.5, 0.5, 1.0};
+    GLfloat shine1 = 100.0; //128이 최대
     
-    glMaterialfv(GL_FRONT, GL_AMBIENT, ambient);
-    glMaterialfv(GL_FRONT, GL_DIFFUSE, diffuse);
-    glMaterialfv(GL_FRONT, GL_SPECULAR, specular);
-    glMaterialf(GL_FRONT, GL_SHININESS, shine);
+    glMaterialfv(GL_FRONT, GL_AMBIENT, ambient1);
+    glMaterialfv(GL_FRONT, GL_DIFFUSE, diffuse1);
+    glMaterialfv(GL_FRONT, GL_SPECULAR, specular1);
+    glMaterialf(GL_FRONT, GL_SHININESS, shine1);
     
-    GLfloat emission_material[] = {0.0, 0.0, 0.0, 1.0};
-    glMaterialfv(GL_FRONT, GL_EMISSION, emission_material);
+    GLfloat emission_material1[] = {0.0, 0.0, 0.0, 1.0};
+    glMaterialfv(GL_FRONT, GL_EMISSION, emission_material1);
     
     glRotatef(45, 0, 0, 1.0);
     glTranslatef(0, 3, 0);
     glRotatef(-45, 0, 0, 1.0);
+    
+    glutSolidSphere(0.5, 100, 100);
+    glPopMatrix();
+    
+    //2번째 행성
+    glPushMatrix();
+    GLfloat ambient2[] = {0.2, 0.2, 0.2, 1.0};
+    GLfloat diffuse2[] = {0.8, 0.8, 0.3, 1.0};
+    GLfloat specular2[] = {1.0, 1.0, 1.0, 1.0};
+    GLfloat shine2 = 128.0;
+    
+    glMaterialfv(GL_FRONT, GL_AMBIENT, ambient2);
+    glMaterialfv(GL_FRONT, GL_DIFFUSE, diffuse2);
+    glMaterialfv(GL_FRONT, GL_SPECULAR, specular2);
+    glMaterialf(GL_FRONT, GL_SHININESS, shine2);
+    
+    GLfloat emission_material2[] = {0.0, 0.0, 0.0, 1.0};
+    glMaterialfv(GL_FRONT, GL_EMISSION, emission_material2);
+    
+    glRotatef(-45, 0, 0, 1.0);
+    glTranslatef(0, 1.2, -2);
+    glRotatef(45, 0, 0, 1.0);
     
     glutSolidSphere(0.5, 100, 100);
     glPopMatrix();
@@ -73,13 +97,17 @@ void reshape(int w, int h){
 
 int main(int argc, char * argv[]) {
     glutInit(&argc, argv);
-    glutInitDisplayMode(GLUT_SINGLE|GLUT_RGB);
+    glutInitDisplayMode(GLUT_SINGLE|GLUT_RGB|GLUT_DEPTH);
     glutInitWindowSize(640, 480);
     glutCreateWindow("test");
     
     glClearColor(0, 0, 0, 0);
     glClear(GL_COLOR_BUFFER_BIT);
+    glClear(GL_DEPTH_BUFFER_BIT);
     glColor3f(1.0, 1.0, 1.0);
+    
+    glEnable(GL_DEPTH_TEST);
+    glDepthFunc(GL_LESS);
     
     glutDisplayFunc(display);
     glutReshapeFunc(reshape);
