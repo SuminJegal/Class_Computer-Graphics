@@ -7,7 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C920BE411FC7FFCD002885AE /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C920BE401FC7FFC6002885AE /* CoreGraphics.framework */; };
 		C9991F9C1FC3B42200175D1C /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C9991F9B1FC3B42200175D1C /* main.cpp */; };
+		C9991FA41FC3B48D00175D1C /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9991FA31FC3B48200175D1C /* OpenGL.framework */; };
+		C9991FA61FC3B49900175D1C /* GLUT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9991FA51FC3B49400175D1C /* GLUT.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -23,8 +26,23 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		C920BE401FC7FFC6002885AE /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		C96B206D1FC419840077D8D9 /* io.bmp */ = {isa = PBXFileReference; lastKnownFileType = image.bmp; path = io.bmp; sourceTree = "<group>"; };
 		C9991F981FC3B42200175D1C /* lab07 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = lab07; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9991F9B1FC3B42200175D1C /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		C9991FA31FC3B48200175D1C /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
+		C9991FA51FC3B49400175D1C /* GLUT.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLUT.framework; path = System/Library/Frameworks/GLUT.framework; sourceTree = SDKROOT; };
+		C9991FB71FC3C1C200175D1C /* europa.bmp */ = {isa = PBXFileReference; lastKnownFileType = image.bmp; path = europa.bmp; sourceTree = "<group>"; };
+		C9991FB81FC3C1C200175D1C /* mercury.bmp */ = {isa = PBXFileReference; lastKnownFileType = image.bmp; path = mercury.bmp; sourceTree = "<group>"; };
+		C9991FB91FC3C1C200175D1C /* neptune.bmp */ = {isa = PBXFileReference; lastKnownFileType = image.bmp; path = neptune.bmp; sourceTree = "<group>"; };
+		C9991FBA1FC3C1C200175D1C /* saturn.bmp */ = {isa = PBXFileReference; lastKnownFileType = image.bmp; path = saturn.bmp; sourceTree = "<group>"; };
+		C9991FBB1FC3C1C200175D1C /* venus.bmp */ = {isa = PBXFileReference; lastKnownFileType = image.bmp; path = venus.bmp; sourceTree = "<group>"; };
+		C9991FBC1FC3C1C300175D1C /* mars.bmp */ = {isa = PBXFileReference; lastKnownFileType = image.bmp; path = mars.bmp; sourceTree = "<group>"; };
+		C9991FBD1FC3C1C300175D1C /* jupiter.bmp */ = {isa = PBXFileReference; lastKnownFileType = image.bmp; path = jupiter.bmp; sourceTree = "<group>"; };
+		C9991FBF1FC3C1C300175D1C /* sun.bmp */ = {isa = PBXFileReference; lastKnownFileType = image.bmp; path = sun.bmp; sourceTree = "<group>"; };
+		C9991FC01FC3C1C300175D1C /* earth.bmp */ = {isa = PBXFileReference; lastKnownFileType = image.bmp; path = earth.bmp; sourceTree = "<group>"; };
+		C9991FC11FC3C1C300175D1C /* uranus.bmp */ = {isa = PBXFileReference; lastKnownFileType = image.bmp; path = uranus.bmp; sourceTree = "<group>"; };
+		C9991FC21FC3C1C300175D1C /* moon.bmp */ = {isa = PBXFileReference; lastKnownFileType = image.bmp; path = moon.bmp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,6 +50,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C920BE411FC7FFCD002885AE /* CoreGraphics.framework in Frameworks */,
+				C9991FA61FC3B49900175D1C /* GLUT.framework in Frameworks */,
+				C9991FA41FC3B48D00175D1C /* OpenGL.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -43,6 +64,7 @@
 			children = (
 				C9991F9A1FC3B42200175D1C /* lab07 */,
 				C9991F991FC3B42200175D1C /* Products */,
+				C9991FA21FC3B48200175D1C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -57,9 +79,31 @@
 		C9991F9A1FC3B42200175D1C /* lab07 */ = {
 			isa = PBXGroup;
 			children = (
+				C96B206D1FC419840077D8D9 /* io.bmp */,
+				C9991FC01FC3C1C300175D1C /* earth.bmp */,
+				C9991FB71FC3C1C200175D1C /* europa.bmp */,
+				C9991FBD1FC3C1C300175D1C /* jupiter.bmp */,
+				C9991FBC1FC3C1C300175D1C /* mars.bmp */,
+				C9991FB81FC3C1C200175D1C /* mercury.bmp */,
+				C9991FC21FC3C1C300175D1C /* moon.bmp */,
+				C9991FB91FC3C1C200175D1C /* neptune.bmp */,
+				C9991FBA1FC3C1C200175D1C /* saturn.bmp */,
+				C9991FBF1FC3C1C300175D1C /* sun.bmp */,
+				C9991FC11FC3C1C300175D1C /* uranus.bmp */,
+				C9991FBB1FC3C1C200175D1C /* venus.bmp */,
 				C9991F9B1FC3B42200175D1C /* main.cpp */,
 			);
 			path = lab07;
+			sourceTree = "<group>";
+		};
+		C9991FA21FC3B48200175D1C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C920BE401FC7FFC6002885AE /* CoreGraphics.framework */,
+				C9991FA51FC3B49400175D1C /* GLUT.framework */,
+				C9991FA31FC3B48200175D1C /* OpenGL.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -234,6 +278,7 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3N2B4ECPAU;
+				GCC_WARN_ABOUT_DEPRECATED_FUNCTIONS = NO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -243,6 +288,7 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3N2B4ECPAU;
+				GCC_WARN_ABOUT_DEPRECATED_FUNCTIONS = NO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;

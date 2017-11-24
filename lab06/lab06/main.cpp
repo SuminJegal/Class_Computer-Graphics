@@ -94,7 +94,8 @@ void display(){
     glLightfv(GL_LIGHT0, GL_DIFFUSE, diffuse0);
     glLightfv(GL_LIGHT0, GL_SPECULAR, specular0);
     
-    GLfloat emission_light[] = {1.0, (128.0/255.0), 0.0, 1.0};
+    GLfloat emission_light[] = {1.0, 1.0, 1.0, 1.0};
+//    GLfloat emission_light[] = {1.0, (128.0/255.0), 0.0, 1.0};
     glMaterialfv(GL_FRONT, GL_EMISSION, emission_light);
     
     glRotated(rotationSun, 0, 0, 1);
