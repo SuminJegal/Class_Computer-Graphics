@@ -11,8 +11,6 @@
 #include <GLUT/glut.h>
 #include <OpenGL/gl.h>
 #include <OpenGL/glu.h>
-#include <Carbon/Carbon.h>
-#include <ApplicationServices/ApplicationServices.h>
 
 double rotationSun = 0.0; //자전
 double rotationMercury = 0;
@@ -71,22 +69,18 @@ GLuint loadRawTexture(const char * filename, int width, int height){
     fread( data, width * height * 3, 1, file );
     fclose( file );
     
-    for(int i = 0; i < width * height ; ++i)
-    {
+    for(int i = 0; i < width * height ; ++i){
         int index = i*3;
         unsigned char B,R;
         B = data[index];
         R = data[index+2];
-        
         data[index] = R;
         data[index+2] = B;
-        
     }
     
     glGenTextures(1, &text);
     glBindTexture(GL_TEXTURE_2D, text);
     glTexEnvf(GL_TEXTURE_ENV, GL_TEXTURE_ENV_MODE, GL_MODULATE);
-    
     glTexParameterf( GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER,GL_LINEAR_MIPMAP_NEAREST );
     glTexParameterf( GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER,GL_LINEAR );
     glTexParameterf( GL_TEXTURE_2D, GL_TEXTURE_WRAP_S,GL_REPEAT );
